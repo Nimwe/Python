@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>Python - Dictionnaire</title>
+
+	<link rel="shortcut icon" href="assets/images/logo_python.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="index.html">Home</a></li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Définitions <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="variable.html">Variables</a></li>
+							<li class="active"><a href="type_primitif.html">Types Primitifs</a></li>
+							<li><a href="liste.html"> Listes </a></li>
+							<li class="active"><a href="dictionnaire.html">Dictionnaires</a></li>
+						</ul>
+					</li>
+					<!--<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Mise en pratique <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Enoncés</a></li>
+							<li class="active"><a href="#">Solutions</a></li>
+						</ul>
+					</li>-->	
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li class="active">Les dictionnaires</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-md-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Utilisation</h1>
+				</header>
+					<h4> Créer une clé-valeur </h4>
+						<p>"cle_1" : "Valeur_1"</p>
+					<br>
+				<h4> Création d'un dictionnaire </h4>
+					<p> nom_du_dictionnaire =  { <br>
+						"cle_1" : "Valeur_1", <br>
+						"cle_2" : "Valeur_2", <br>
+						"cle_3" : "Valeur_3", <br>
+						"cle_4" : ["Valeur_4", "Valeur_5"], <br>
+					} 
+					<br>
+					>>> (En attente d'instructions )
+					</p>
+					<br>
+				<h4> Parcourir un dictionnaire </h4>
+					<p> Méthode 1 : <br>
+						for i in nom_du_dictionnaire.items() : <br>
+						print (i) 
+					</p>			
+					<blockquote><p>Retourne => ('cle_1', "Valeur_1") <br>
+						('cle_2', 'valeur_2') <br>
+						('cle_3', 'valeur_3') <br>
+						('cle_4', ['valeur_4", "Valeur_5'])
+					</p></blockquote>
+					<p> Méthode 2 : <br>
+						for cle,valeur in nom_du_dictionnaire.items() : <br>
+						print("L'élément de clé", cle, "vaut", valeur) <br>
+						</p>
+					<blockquote><p>Retourne => L'élément de clé cle_1 vaut Valeur_1 <br>
+						L'élément de clé cle_2 vaut valeur_2 <br>
+						L'élément de clé cle_3 vaut valeur_3 <br>
+						L'élément de clé cle_4 vaut ['valeur_4", "valeur_5'] <br>
+					</p></blockquote>
+					<br>
+				<h4> Accéder à une valeur via la clé : </h4>
+					<p> nom_du_dictionnaire["cle_1"] </p>
+					<blockquote><p>Retourne => "valeur_1"</p></blockquote>
+					<br>
+				<h4> Ajouter une clé-valeur : </h4>
+					<p> * Si la clé n'éxiste pas, il suffit d'ajouter une nouvelle clé dans le dictionnaire existant : <br>
+						nom_du_dictionnaire["cle_5"] = "valeur_6"
+						for i in nom_du_dictionnaire.items() : print (i) </p>
+					<blockquote><p>Retourne => ('cle_1', "valeur_1") <br>
+								('cle_2', 'valeur_2') <br>
+								('cle_3', 'valeur_3') <br>
+								('cle_4', ['valeur_4', 'valeur_5']) <br>
+								('cle_5', 'valeur_6')
+					</p></blockquote>
+					<p>* Si la clé existe déjà l'ancienne valeur sera écrasée par la nouvelle valeur : <br>
+						nom_du_dictionnaire["cle_3"] = " valeur_3_bis"
+						for i in nom_du_dictionnaire.items() : print (i) </p>
+					<blockquote><p>Retourne => ('cle_1', "valeur_1") <br>
+								('cle_2', 'valeur_2') <br>
+								('cle_3', 'valeur_3_bis') <br>
+								('cle_4', ['valeur_4", "valeur_5']) <br>
+								('cle_5', 'valeur_6')  <br>
+					</p></blockquote>
+				<h4> Supprimer une paire clé-valeur : </h4>
+					<p> * Avec le mot clé 'del' : <br>
+						del nom_du_dictionnaire["cle_1"]
+						print (nom_du_dictionnaire) </p>
+					<blockquote><p>Retourne => {'cle_2': 'valeur_2', <br>
+								'cle_3': 'valeur_3', <br>
+								'cle_4': ['valeur_4", "valeur_5']}<br>
+					</p></blockquote>	
+				<h4> vérifier l'existance d'une clé spécifique </h4>    
+					<p> On utilise le mot-clé 'in'. <br>
+						Spécifié la clé recherché + in + nom de la variable du dictionnaire éxaminé. Le résultat renvoie un booléen qui indique si la clé est dans ce dictionnaire <br>
+						"cle_2" in nom_du_dictionnaire </p>
+					<blockquote><p>Retourne=> True
+					</p></blockquote>		
+				<h4>Autres methodes couramment utilisées pour manipuler les dictionnaires : </h4>
+					<ul>
+						<li> print ("keys() -> ​​Retourne une vue sur les clés du dictionnaire -> nom_du_dictionnaire.keys()") </li>
+						<li> print ("values() -> Retourne une vue sur les valeurs du dictionnaire -> nom_du_dictionnaire.values()") </li>
+						<li> print ("items() -> Retourne une vue sur les couples (clé, valeur) du dictionnaire -> nom_du_dictionnaire.items()") </li>
+						<li> print ("get(clé) -> Retourne la valeur associée à la clé spécifiée. Si la clé n'est pas présente dans le dictionnaire, retourne la valeur None -> nom_du_dictionnaire.get(clés)") </li>
+						<li> print ("pop(clé) -> Supprime la clé spécifiée et retourne la valeur associée. Si la clé n'est pas présente dans le dictionnaire, retourne la valeur None -> nom_du_dictionnaire.pop(clés)") </li>
+						<li> print ("clear() -> Supprime tous les éléments du dictionnaire -> nom_du_dictionnaire.clear()") </li>
+					</ul>
+			</article>
+			<!-- /Article -->
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-right">
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>A savoir</h4>
+						<p> Structure de données enregistrées dans des paires <br> clé - valeur. 
+							Les dictionnaires sont indiqués par des {}, il y a deux point (:) entre la clé et la valeur et 
+							une virgule (,) à la fin</p>
+					</div>
+				</div> <!--En cours de construction
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Dans VSCode</h4>
+						<p><img src="assets/images/1.jpg" alt=""></p>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Dans le terminal</h4>
+						<p><img src="assets/images/2.jpg" alt=""></p>
+					</div>
+				</div>
+
+			</aside> -->
+		<!--/Sidebar -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+
+	<!--Footer-->
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 widget">
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://github.com/Nimwe"><i class="fa fa-github fa-2"></i></a>
+								<a href="https://www.linkedin.com/in/florence-allheilly-98b747230/"><i class="fa fa-linkedin fa-2"></i></a>
+								
+							</p>	
+						</div>
+					</div>
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="index.html">Home</a> |
+								<a href="variable.html">Variables</a> |
+								<a href="type_primitif.html">Types Primitifs</a> |
+								<a href="liste.html">Listes</a> |
+								<a href="dictionnaire.html">Dictionnaires</a> |
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2024, Nimwë. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+	<!-- /Footer-->
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+</html>
